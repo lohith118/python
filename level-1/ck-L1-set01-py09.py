@@ -1,9 +1,10 @@
-#sum of k nos of n nos
+#no of digits
 import sys
-n,k = map(int,input('enter n,k : ').split())
-L = list(map(int,input('enter n nos : ').split()))
+n = int(input('enter n : '))
 sum = 0
-for i in range(k) :
-    sum += L[i]
+a = n
+while a > 0 :
+    sum += 1
+    a //= 10
 print(sum)
 
