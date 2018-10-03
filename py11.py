@@ -1,5 +1,7 @@
 a,b = map(int,input().split())
-print(a,b)
-if a % 2 == 0 : a = a+1
+if a%2==1 : 
+	a = a+2
+else: 
+	a=a+1
 for i in range(a,b+1,2) :
-	print(i,sep=' ')
+	print(i,end=' ')
