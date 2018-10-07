@@ -1,9 +1,10 @@
 import sys, string, math
 s = input()
-L = list(set(s))
-k = s.count(L[0])
-for i in range(1,len(L)) :
-    if s.count(L[i]) != k :
-        print('No')
-        sys.exit()
-print('Yes')
+k = s.count(s[0])
+flag = 1
+for i in range(1,len(s)) :
+    if s.count(s[i]) != k :
+        flag = 0
+        break
+if flag : print('Yes')
+else : print('No')
