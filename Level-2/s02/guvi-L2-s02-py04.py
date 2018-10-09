@@ -1,6 +1,7 @@
 import sys, string, math
+n = int(input())
 s = input()
-vow = 'aeiou'
+vow = 'aeiouAEIOU'
 s2 = ''
 for c in s :
     if c not in vow : s2 = s2 + c
