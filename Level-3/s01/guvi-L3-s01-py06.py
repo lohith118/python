@@ -7,6 +7,6 @@ for i in range(len(L)) :
         print(L[i])
         flag = 0
         break
-if flag == 1 : print('unque')
+if flag == 1 : print('unique')
 
 
