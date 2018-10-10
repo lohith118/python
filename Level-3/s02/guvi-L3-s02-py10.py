@@ -6,12 +6,13 @@ def isprime(n) :
         if n%i == 0 : return False
     return True
 
-a,b = map(int,input().split())
+a,b = input().split()
+a = int(a)
+b = int(b)
 cnt = 0
 for i in range(a,b+1) :
     s = bin(i)[2:]
     k = s.count('1')
     if isprime(k) : cnt += 1
 print(cnt)
-
 
