@@ -9,7 +9,7 @@ if min1 == 0:
     sys.exit()
 for i in range(0,len1-1) :
     for j in range(i+1,len1) :
-        if abs(L[i]+L[j]) < min1 :
+        if abs(L[i]+L[j]) <= min1 :
             min1 = abs(L[i]+L[j])
             a,b = L[i],L[j]
             if min1 == 0 :
