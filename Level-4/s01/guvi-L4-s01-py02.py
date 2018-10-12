@@ -8,7 +8,7 @@ def buildLowestNumber2(str1, n, res) :
     if len1 <= n :  return;
 
     # Find the smallest char among first(n + 1) chars of str.
-    minc = min(str1)
+    minc = min(str1[:n+1])
     min1 = str1.index(minc)
     #print('min1=',minc,min1)
     # Append the smallest char to res -
