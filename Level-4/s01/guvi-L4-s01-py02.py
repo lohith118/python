@@ -1,37 +1,35 @@
-import  sys, string, math, itertools
-s,k = input().split()
-k = int(k)
-L = list(s)
-#print(L)
-min1 = min(L)
-#print(min1)
-i1 = L.index(min1)
-#print(i1)
-if k <= i1 :
-    L2 = L[:i1]
-    #print(L2)
-    while k :
-        max1 = max(L2)
-        #print(max1)
-        L.remove(max1)
-        L2.remove(max1)
-        k -= 1
-    s2 = ''.join(L)
-    print(s2)
-else :
-    L = L[i1:]
-    k -= i1
-    L2 = L[1:]
-    min1 = min(L2)
-    print(L,L2,k,min1)
-    i1 = L2.index(min1)
-    L2 = L[1:i1+1]
-    print(L2)
-    while k :
-        max1 = max(L2)
-        #print(max1)
-        L.remove(max1)
-        L2.remove(max1)
-        k -= 1
-    s2 = ''.join(L)
-    print(s2)
+import sys,string
+def buildLowestNumber2(str1, n, res) :
+    if n == 0 :
+        res.append(str1);
+        return
+
+    len1 = len(str1);
+    if len1 <= n :  return;
+
+    # Find the smallest char among first(n + 1) chars of str.
+    minc = min(str1)
+    min1 = str1.index(minc)
+    #print('min1=',minc,min1)
+    # Append the smallest char to res -
+    res.append(str1[min1]);
+    #print(res)
+
+    # substring starting from minIndex +1 to str.length() - 1.
+    new_str = str1[min1+1 : ]
+    #print('s2=',new_str)
+
+    # Recur for the above substring and n equals to n-minIndex
+    buildLowestNumber2(new_str, n-min1, res);
+
+def buildLowestNumber(s1, n) :
+    res = []
+    buildLowestNumber2(s1, n,res)
+    return res
+
+# Driver program
+s1,n = input().split()
+n = int(n)
+L = buildLowestNumber(s1, n)
+ans = ''.join(L)
+print(ans)
