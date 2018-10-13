@@ -13,4 +13,4 @@ while len(L) > 1 :
     #print(L2,L2i)
     L = L2[:]
     Li = L2i[:]
-print(Li[0]+1)
+print(L[0])
