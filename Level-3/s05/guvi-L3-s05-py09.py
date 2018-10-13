@@ -8,7 +8,7 @@ def fact(n) :
 
 n,k = input().split()
 n,k = int(n), int(k)
-print(n,k)
+#print(n,k)
 ncr = fact(n)
 dn =  fact(n-k) * fact(k)
 ncr = ncr // dn
