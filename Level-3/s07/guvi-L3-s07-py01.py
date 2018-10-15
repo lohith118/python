@@ -3,5 +3,16 @@ n = int(input())
 L = [ int(x) for x in input().split()]
 n,k = input().split()
 n,k = int(n),int(k)
-i1 = abs(L.index(n) - L.index(k))
-print(i1)
+min1 = len(L)
+while n in L and k in L :
+    i1 = L.index(n)
+    i2 = L.index(k)
+    gap = abs(i1-i2)
+    if gap < min1 :
+        min1 = gap
+    if i1 < i2 :
+        L.pop(i1)
+    else :
+        L.pop(i2)
+
+print(min1)
