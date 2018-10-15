@@ -1,5 +1,4 @@
 import sys,string
-
 def LCS_2(S,T):
     m = len(S)
     n = len(T)
@@ -17,9 +16,9 @@ def LCS_2(S,T):
                     L.append(S[i-c+1:i+1])
                 elif c == longest:
                     L.append(S[i-c+1:i+1])
-    res = ''.join(L)
-    return res
+
+    return L
 s1 = input()
 s2 = input()
 res = LCS_2(s1,s2)
-print(res)
+print(*res)
