@@ -1,11 +1,6 @@
 import sys,string, itertools
-L = []
-s = input()
-while s != '':
-    L.append(s)
-    s = input()
-#print(L)
-n = len(L)
+n = 2
+L = [ input() for x in range(n)]
 L2 = []
 for i in range(0,n) :
     L2.append([])
