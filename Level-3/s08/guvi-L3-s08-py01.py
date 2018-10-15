@@ -1,5 +1,7 @@
 import sys,string
-L = input().split()
+s = input()
+s2 = s.replace('.','')
+L = s2.split()
 n = len(L)
 L2 = []
 for i in range(0,n) :
