@@ -1,6 +1,5 @@
 import sys,string
 s = input()
-print(s)
 for i in range(11,100,11) :
     s2 = str(i)
     if s2 in s :
