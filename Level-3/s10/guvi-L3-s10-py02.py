@@ -11,7 +11,7 @@ def findNext(L, n):
     # If no such digit found,then all numbers are in
     # descending order, no greater number is possible
     if i == 0:
-        return "impossible"
+        return "-1"
 
     # Find the smallest digit on the right side of
     # (i-1)'th digit that is greater than number[i-1]
