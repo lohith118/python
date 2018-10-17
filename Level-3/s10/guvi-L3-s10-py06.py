@@ -12,7 +12,10 @@ if n <= 9:
     sys.exit()
 a = n // 9
 b = n % 9
-s = str(b) + str('9') * a
+if b :
+    s = str(b) + str('9') * a
+else :
+    s = str('9') * a
 print(s)
 
 
