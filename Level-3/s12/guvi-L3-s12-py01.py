@@ -9,7 +9,7 @@ for i in range(0,n) :
     L[i] = [int(x) for x in input().split()]
 sum1 = 0
 for i in range(0,n) :
-    sum1 += L[i][i]
+    sum1 += L[i][n-1-i]
 print(sum1)
 
 
