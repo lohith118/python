@@ -2,6 +2,7 @@ import sys, string, math
 
 n = int(input())
 L = [ int(x) for x in input().split()]
+L2 = []
 for i in range(0,n) :
     k = 1
     if L[i] > 0:
@@ -21,7 +22,8 @@ for i in range(0,n) :
             else :
                 k += 1
                 sign = -1
-    print(k)
+    L2.append(k)
+print(*L2)
 
 
 
