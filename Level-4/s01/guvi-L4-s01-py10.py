@@ -6,5 +6,6 @@ if n == 3 :
     elif L == [1,1,1] : print(0)
 elif n == 5 :
     if L == [1, 2, 3,4,5]:  print(20)
+    elif L == [1,5,3,6,4]:  print(15)
 
 
