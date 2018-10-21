@@ -16,5 +16,13 @@ else :
     i = 0
     while i<n2 and s1[i] == s2[i] :
         i += 1
-    print(n1-i)
+    s31 = s1[i:]
+    s32 = s2[i:]
+    L = list(s31)
+    k = 0
+    for c in s32 :
+        if c in L :
+            k += 1
+            L.remove(c)
+    print(n1-i-k)
 
