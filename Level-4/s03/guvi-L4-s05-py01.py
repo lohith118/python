@@ -1,5 +1,4 @@
 import sys,string
-
 n0,n1 = input().split()
 n0,n1 = int(n0),int(n1)
 if n1 > (2+2*n0) :
@@ -16,10 +15,9 @@ if n1-n0 == 1 :
 while n1 > n0 and n0 > 0:
     if n1-n0 == 1 :
         break
-    print('110')
     n1 -= 2
     n0 -= 1
-    print(n1,n0)
+    #print(n1,n0)
     s += '110'
 if n1-n0 == 1 :
     s += '10'*n0+'1'
