@@ -11,7 +11,7 @@ dic1 = cfreq(s)
 Lk = list(dic1.keys())
 #print(dic1,Lk)
 
-for j in range(n-2,0,-1) :
+for j in range(n-2,-1,-1) :
     #print('len = ', j+1)
     for c in Lk :
         k = 0
