@@ -1,6 +1,7 @@
 import sys,string
 n = int(input())
 L = [ int(x) for x in input().split()]
+n = len(L)
 cnt = 0
 for i in range(0,n-2) :
     for j in range(i+1, n-1):
