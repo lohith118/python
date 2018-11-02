@@ -1,7 +1,7 @@
 import sys,string
 
 L = input().split()
-s = ''.join(L)
-print(s)
+s2 = ''.join(L)
+print(s2)
 
 
