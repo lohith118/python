@@ -1,11 +1,10 @@
 import sys,string, math,itertools
-
 n,k = input().split()
 n,k = int(n),int(k)
-L = []
+cnt = 0
 for i in range(n,k+1) :
     a = int(math.sqrt(i))
     if a*a == i :
-        L.append(i)
-print(*L)
+        cnt += 1
+print(cnt)
 
