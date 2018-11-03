@@ -2,7 +2,7 @@ import sys,string, math
 
 n = int(input())
 L = [ int(x) for x in input().split()]
-print(L)
+#print(L)
 while len(L) > 0 :
     n = len(L)
     if n %2 == 1 :
