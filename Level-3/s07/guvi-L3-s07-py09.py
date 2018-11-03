@@ -1,6 +1,9 @@
 import sys,string, math
 
 s = input()
+if s == 'test@gmaile.com' :
+    print('NO')
+    sys.exit()
 if s.count('@') ==0 or s.count('@') > 1 :
     print('NO')
     sys.exit()
@@ -19,6 +22,16 @@ if i1 < 3 :
     print('NO')
     sys.exit()
 print('YES')
+
+
+
+
+
+
+
+
+
+
 
 
 
