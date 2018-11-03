@@ -15,6 +15,6 @@ if k >= L2[-1] :
     print(n)
     sys.exit()
 i = 0
-while L[i] <= k :
+while L2[i] <= k :
     i += 1
 print(i)
