@@ -2,8 +2,10 @@ import sys,string, math
 
 n,k = input().split()
 n,k = int(n),int(k)
-ans = n-k
-print(1,ans)
+if k < n-k :
+    print(1,k+1)
+else :
+    print(1,k)
 
 
 
