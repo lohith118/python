@@ -1,5 +1,5 @@
 import sys, string, math
-s1 = input()
+L = input().split()
 s2 = input()
-k2 = s1.count(s2)
+k2 = L.count(s2)
 print(k2)
