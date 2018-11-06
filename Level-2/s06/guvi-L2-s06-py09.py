@@ -1,6 +1,6 @@
 import sys, string, math
-L =  list(input())
-
+n = int(input())
+L =  input().split()
 L2 = []
 L3 = L[:]
 #print(L3)
