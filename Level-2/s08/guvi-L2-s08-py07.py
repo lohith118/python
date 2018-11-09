@@ -2,6 +2,7 @@ import sys,string, math,itertools
 
 n = int(input())
 L = [ int(x) for x in input().split()]
+n = len(L)
 max1 = 0
 k = 1
 i = 0
