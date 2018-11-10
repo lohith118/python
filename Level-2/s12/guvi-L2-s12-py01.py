@@ -10,8 +10,8 @@ while len(L1) :
     x = L1[0]
     if x in L2 :
         L3.append(x)
-        while x in L1 :
-            L1.remove(x)
+        L1.remove(x)
+        L2.remove(x)
     else :
         L1.remove(x)
 
