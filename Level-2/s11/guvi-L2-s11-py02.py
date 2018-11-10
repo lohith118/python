@@ -7,7 +7,6 @@ L3 = []
 if n%2==1 :
     i = 0
     j = n//4
-    print(j)
     for i in range(0,j) :
         L3.append(L2[i])
         L3.append(L2[-i-1])
