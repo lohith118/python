@@ -1,13 +1,29 @@
 import sys, string, math
+from itertools import permutations,combinations
+
 n,k = input().split()
-n,k = int(n), int(k)
-L1 = [ int(x) for x in input().split()]
-L2 = [ int(x) for x in input().split()]
-if n==5 and k==5 and L1 == [1,2,3,4,5] and L2 == [1,1,1,1,1] :
-    print(2)
-elif n==1 and k==1 and L1 == [2] and L2 == [100] :
-    print(0)
-elif n==5 and k==100 and L1 == [1,2,3,4,5] and L2 == [1,2,3,4,5] :
-    print(10)
-elif n==5 and k==2 and L1 == [1,1,1,1,1] and L2 == [1,2,3,4,5] :
-    print(9)
+n,k = int(n),int(k)
+Lw = [ int(x) for x in input().split()]
+Lv = [ int(x) for x in input().split()]
+dic1 = {}
+for i in range(0,n) :
+    dic1[Lw[i]] = Lv[i]
+L3 = []
+for i in range(1,n+1) :
+    L2 = list(combinations(Lw,i))
+    for x in L2 :
+        if sum(x) <= k :
+            L3.append(x)
+#print(L3)
+max1 = 0
+for x in L3 :
+    sum1 = 0
+    for i in x :
+        sum1 += dic1[i]
+    #print(x,sum1)
+    if sum1 > max1 :
+        max1 = sum1
+print(max1)
+
+
+
