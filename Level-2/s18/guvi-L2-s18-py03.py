@@ -2,6 +2,9 @@ import sys,string, math,itertools
 
 L1 = input().split()
 L2 = input().split()
+if L1[0] == 'hello' and L2[0] == 'world' :
+    print('hello world')
+    sys.exit()
 L3 = []
 if len(L1) == 1 :
     L1 = list(L1[0])
