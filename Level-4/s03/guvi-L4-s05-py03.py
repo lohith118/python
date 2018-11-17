@@ -14,7 +14,14 @@ for i in L1 :
 for i in range(0,n) :
     if L1[i] in Ldup :
         Lin.append(i)
+cnt = len(Lno)
+#print('Lno=',Lno)
+#print('Ldup=',Ldup)
+#print('Lin=',Lin)
+
 for i in range(0,n) :
+    if len(Lno) == 0 :
+        break
     if i in Lin :
         if i == Lin[0] :
             if Lno[0] < L1[i] :
@@ -27,12 +34,9 @@ for i in range(0,n) :
                 L1[i] = Lno.pop(0)
                 Lin.pop(0)
 
-#print('Lno=',Lno)
-#print('Ldup=',Ldup)
-#print('Lin=',Lin)
-print(*L1)
 
-#2 8 4 6 7 1 9 3 10 5
+print(cnt)
+print(*L1)
 
 
 
