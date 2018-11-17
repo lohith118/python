@@ -62,8 +62,9 @@ def cherry2(s) :
 n,k = input().split()
 n,k = int(n),int(k)
 sum1 = 0
+L = [ input() for i in range(0,n)]
 for i in range(0,n) :
-    s = input()
+    s = L[i]
     s1 = s.replace('R','A')
     s2 = s1.replace('G','B')
     sum1 += cherry2(s2)
