@@ -3,12 +3,13 @@ import sys, string, math
 def factors1(n) :
     L = []
     i = 2
+    cnt = 0
     while n >1 :
         while n%i == 0 :
-            L.append(i)
+            cnt += 1
             n //= i
         i += 1
-    return L
+    return cnt
 
 n = int(input())
 L = [input().split() for i in range(0,n)]
@@ -17,10 +18,9 @@ for i in range(0,n) :
     p = 1
     n, k = L[i]
     n, k = int(n), int(k)
-    if n == 5000000  and k == 1 :
-        print('18703742')
-        continue
+
     for i in range(k+1,n+1) :
         p = p*i
-    L2 = factors1(p)
-    print(len(L2))
+    a = factors1(p)
+    print(a)
+
