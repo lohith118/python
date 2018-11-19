@@ -1,5 +1,4 @@
 import sys, string, math
-
 def isPrime(n) :
     if n <= 1 : return False
     if n==2 or n==3 : return True
@@ -35,45 +34,13 @@ cnt5 = L.count(5)
 if cnt2 + cnt5 == 0 :
     print(n * a)
     sys.exit()
-if cnt5==0 :
-    p = 1
-    for x in L :
-        if x != 2 :
-            p = p * x
-    if cnt2 > k :
-        k = cnt2
-    a = p * 10**k
-    if n >=a :
-        print(n)
-    else :
-        print(a)
-    sys.exit()
-if cnt2==0 :
-    p = 1
-    for x in L :
-        if x != 5 :
-            p = p * x
-    if cnt5 > k :
-        k = cnt5
-    a = p * 10**k
-    if n >=a :
-        print(n)
-    else :
-        print(a)
-    sys.exit()
-if cnt2 > 0 and cnt5 > 0 :
-    if cnt2 > cnt5 :
-        if cnt2 > k :
-            k = cnt2
-    elif cnt5 > cnt2:
-        if cnt5 > k :
-            k = cnt5
-    p = 1
-    for x in L :
-        if x != 5 and x != 2 :
-            p = p * x
-    a = p * 10**k
-    if n >=a :
-        print(n)
-    else :
-        print(a)
+k = max(k,cnt2,cnt5)
+p = 1
+for x in L :
+    if x != 5 and x != 2 :
+        p = p * x
+a = p * 10**k
+if n >=a :
+    print(n)
+else :
+    print(a)
