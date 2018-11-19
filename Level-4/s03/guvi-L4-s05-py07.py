@@ -42,7 +42,11 @@ if cnt5==0 :
             p = p * x
     if cnt2 > k :
         k = cnt2
-    print(p * 10**k)
+    a = p * 10**k
+    if n >=a :
+        print(n)
+    else :
+        print(a)
     sys.exit()
 if cnt2==0 :
     p = 1
@@ -51,7 +55,11 @@ if cnt2==0 :
             p = p * x
     if cnt5 > k :
         k = cnt5
-    print(p * 10**k)
+    a = p * 10**k
+    if n >=a :
+        print(n)
+    else :
+        print(a)
     sys.exit()
 if cnt2 > 0 and cnt5 > 0 :
     if cnt2 > cnt5 :
@@ -64,4 +72,8 @@ if cnt2 > 0 and cnt5 > 0 :
     for x in L :
         if x != 5 and x != 2 :
             p = p * x
-    print(p * 10**k)
+    a = p * 10**k
+    if n >=a :
+        print(n)
+    else :
+        print(a)
