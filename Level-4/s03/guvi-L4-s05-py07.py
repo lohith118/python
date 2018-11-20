@@ -1,4 +1,6 @@
 import sys, string, math
+
+
 def isPrime(n) :
     if n <= 1 : return False
     if n==2 or n==3 : return True
@@ -26,21 +28,41 @@ a = 10**k
 if isPrime(n) :
     print(n * a)
     sys.exit()
+s = str(n)[::-1]
+cnt0 = 0
+for c in s :
+    if c=='0' :
+        cnt0 += 1
+    else :
+        break
+if cnt0 >= k :
+    print(n)
+    sys.exit()
 L = factors1(n)
 #print(L)
 cnt2 = L.count(2)
 cnt5 = L.count(5)
-#print(cnt2,cnt5)
 if cnt2 + cnt5 == 0 :
     print(n * a)
     sys.exit()
-k = max(k,cnt2,cnt5)
+
+if cnt2 < k and cnt5 < k :
+    while 2 in L : L.remove(2)
+    while 5 in L : L.remove(5)
+elif cnt2 < cnt5 :
+    while 2 in L :
+        L.remove(2)
+    if cnt5 > k :
+        for i in range(k) :
+            L.remove(5)
+elif cnt5 < cnt2 :
+    while 5 in L :
+        L.remove(5)
+    if cnt2 > k :
+        for i in range(k) :
+            L.remove(2)
 p = 1
 for x in L :
-    if x != 5 and x != 2 :
-        p = p * x
+    p = p * x
 a = p * 10**k
-if n >=a :
-    print(n)
-else :
-    print(a)
+print(a)
