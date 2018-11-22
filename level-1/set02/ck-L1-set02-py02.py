@@ -1,4 +1,6 @@
 # no is palindrome
 import sys
 n = int(input('enter n :'))
-sum=0
+s = str(n)
+if  s == s[::-1] : print(‘yes’)
+else :             print(‘no’)
