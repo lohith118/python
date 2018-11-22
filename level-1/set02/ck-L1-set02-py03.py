@@ -1,7 +1,12 @@
 # no is prime
 import sys
 n = int(input('enter n :'))
-sum=0
-print('checking for prime')
-if n%2 == 0 : print('Not prime')
-else        : print('Prime')
+if n==1 : print(‘no’)
+elif n==2 or n==3 : print(‘yes’)
+else :
+    for i in range(2,n) :
+	if n%i == 0 :
+	    print(‘no’)
+	    sys.exit()
+    else :
+	print(‘yes’)
