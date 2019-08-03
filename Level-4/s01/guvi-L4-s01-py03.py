@@ -1,23 +1,23 @@
 import sys, string, math
-s1,s2 = input().split()
-n1 = len(s1)
-n2 = len(s2)
+p1,p2 = input().split()
+n1 = len(p1)
+n2 = len(p2)
 if n2 > n1 :
     i = 0
-    while i<n1 and s1[i] == s2[i] :
+    while i<n1 and p1[i] == p2[i] :
         i += 1
     print(n2-i)
 elif n2 == n1 :
     i = 0
-    while i<n2 and s1[i] == s2[i] :
+    while i<n2 and p1[i] == p2[i] :
         i += 1
     print(n2-i)
 else :
     i = 0
-    while i<n2 and s1[i] == s2[i] :
+    while i<n2 and s1[i] == p2[i] :
         i += 1
-    s31 = s1[i:]
-    s32 = s2[i:]
+    s31 = p1[i:]
+    s32 = p2[i:]
     L = list(s31)
     k = 0
     for c in s32 :
